@@ -87,15 +87,26 @@ const NavigationBar = () => {
         <NavbarContent justify="end">
           {session ? (
             <NavbarItem className="hidden lg:flex">
-              <Link href="#">Logout</Link>
+              <Button variant="flat" color="secondary" className="font-medium">
+                Logout
+              </Button>
             </NavbarItem>
           ) : (
             <>
               <NavbarItem className="hidden lg:flex">
-                <Link href="#">Login</Link>
+                <form>
+                  {" "}
+                  {/*TODO: action for logout */}
+                  <Link href="/login">Login</Link>
+                </form>
               </NavbarItem>
               <NavbarItem>
-                <Button as={Link} color="primary" href="#" variant="flat">
+                <Button
+                  as={Link}
+                  color="primary"
+                  href="/register"
+                  variant="flat"
+                >
                   Sign Up
                 </Button>
               </NavbarItem>
